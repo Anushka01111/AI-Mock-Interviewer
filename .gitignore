@@ -1,0 +1,44 @@
+# Environment & secrets
+venv/
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+server_log.txt
+
+# Downloaded/generated model files (large, shouldn't be in git)
+app/pipeline/face_landmarker.task
+app/pipeline/bin/
+**/models--*/
+
+# Generated reports and charts
+data/generated_reports/
+data/sample_resumes/*.pdf
+data/sample_resumes/*.json
+
+# Test media files
+*.wav
+*.mp4
+*.m4a
+!test_resume.pdf
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
