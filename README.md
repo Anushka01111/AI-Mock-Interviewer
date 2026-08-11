@@ -138,7 +138,7 @@ It will print a URL like `http://localhost:5173/`. Open that in your browser.
 ## Tech Stack
 
 **Backend:** FastAPI, MySQL, SQLAlchemy, Redis, JWT auth
-**AI/ML:** OpenAI GPT-4o (questions + feedback), Whisper (speech-to-text), Librosa (prosody analysis), XGBoost (speech confidence), MediaPipe (head pose), HuggingFace Transformers (facial emotion), Sentence-BERT (answer scoring)
+**AI/ML:** OpenAI GPT-4o-mini (questions + feedback), Whisper (speech-to-text), Librosa (prosody analysis), XGBoost (speech confidence), MediaPipe (head pose), HuggingFace Transformers (facial emotion), Sentence-BERT (answer scoring)
 **Frontend:** React, Vite, Tailwind CSS, React Router, Axios
 **Reporting:** ReportLab (PDF generation), Matplotlib (charts)
 
@@ -149,12 +149,12 @@ It will print a URL like `http://localhost:5173/`. Open that in your browser.
 ```
 Resume PDF upload
     -> Text extraction + parsing
-    -> GPT-4o generates 10 personalised questions + ideal answers
+    -> GPT-4o-mini generates 10 personalised questions + ideal answers
     -> Candidate records answer (audio + video, browser MediaRecorder API)
     -> Whisper transcribes audio -> Librosa extracts prosody -> confidence score
     -> MediaPipe + HuggingFace analyse video frames -> facial/eye-contact score
     -> Sentence-BERT compares transcript to ideal answer -> accuracy score
     -> All scores aggregated across the session
-    -> GPT-4o synthesises narrative feedback
+    -> GPT-4o-mini synthesises narrative feedback
     -> Report displayed in-app + downloadable as PDF
 ```
