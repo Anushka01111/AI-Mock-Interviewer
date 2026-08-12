@@ -9,7 +9,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def build_prompt(resume_json: dict) -> str:
     return f"""You are an interview question generator. Based on the resume data below,
-generate exactly 10 interview questions ordered from easy to hard, each with an ideal answer.
+generate exactly 10 interview questions with increasing difficulty level (they should be detailed, specific and industry relevant interview questions), each with an ideal answer.
 
 Resume data:
 - Skills: {resume_json.get('skills')}
